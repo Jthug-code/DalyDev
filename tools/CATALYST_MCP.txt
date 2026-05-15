@@ -1,0 +1,14 @@
+Godot Catalyst (MCP) — Cursor configuration
+===========================================
+
+1) Install the editor addon into this repo (requires network):
+
+   bash tools/install_catalyst_addon.sh
+
+2) In Godot: Project -> Project Settings -> Plugins -> enable "Godot Catalyst".
+
+3) In Cursor MCP settings, point GODOT_PROJECT_PATH at this project directory:
+
+   /Users/jessedaly/.cursor/projects/empty-window/tower-combat-slice
+
+The upstream MCP snippet typically uses npx to run the `godot-catalyst` CLI, which bridges to the Godot editor plugin over localhost WebSocket.

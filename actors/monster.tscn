@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/battle_actor.gd" id="1_battle"]
+[ext_resource type="Material" path="res://materials/mat_monster.tres" id="2_mat"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mon"]
+radius = 0.38
+height = 1.25
+
+[node name="Monster" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_battle")
+display_name = "Ash Hound"
+max_hp = 18
+attack_damage = 4
+is_player = false
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
+mesh = SubResource("CapsuleMesh_mon")
+material_override = ExtResource("2_mat")
+
+[node name="IdleAnim" type="AnimationPlayer" parent="."]

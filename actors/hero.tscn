@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/battle_actor.gd" id="1_battle"]
+[ext_resource type="Material" path="res://materials/mat_hero.tres" id="2_mat"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hero"]
+radius = 0.32
+height = 1.55
+
+[node name="Hero" type="Node3D"]
+script = ExtResource("1_battle")
+display_name = "Ser Rook"
+max_hp = 16
+attack_damage = 5
+is_player = true
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.775, 0)
+mesh = SubResource("CapsuleMesh_hero")
+material_override = ExtResource("2_mat")
+
+[node name="IdleAnim" type="AnimationPlayer" parent="."]

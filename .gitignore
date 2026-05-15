@@ -1,0 +1,22 @@
+# Godot 4+
+.godot/
+*.translation
+
+# Imports
+.import/
+
+# Builds / exports
+export_presets.cfg
+*.app
+*.exe
+*.pck
+*.zip
+
+# OS / editor
+.DS_Store
+*.swp
+*.tmp
+
+# Catalyst / tooling (optional local secrets)
+.env
+*.log

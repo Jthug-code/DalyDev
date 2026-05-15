@@ -1,0 +1,16 @@
+; Engine configuration file.
+; Godot 4.x — Forward+ for 3D lighting.
+config_version=5
+
+[application]
+config/name="TowerCombatSlice"
+config/description="3D tower blockout + minimal turn-based combat slice. Godot Catalyst: run tools/install_catalyst_addon.sh then enable the plugin; see tools/CATALYST_MCP.txt."
+run/main_scene="res://scenes/tower/tower_floor_01.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+
+[autoload]
+CombatDirector="*res://autoload/combat_director.gd"
+
+[layer_names]
+3d_physics/layer_1="world"
+3d_physics/layer_2="actors"

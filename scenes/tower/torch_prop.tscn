@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/torch_prop.gd" id="1_torch"]
+[ext_resource type="Material" path="res://materials/mat_torch_emissive.tres" id="2_em"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_stem"]
+top_radius = 0.055
+bottom_radius = 0.08
+height = 0.52
+
+[node name="Torch" type="Node3D"]
+script = ExtResource("1_torch")
+
+[node name="Stem" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, 0)
+mesh = SubResource("CylinderMesh_stem")
+material_override = ExtResource("2_em")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0.48, 0)
+light_color = Color(1, 0.58, 0.22, 1)
+light_energy = 3.6
+spot_range = 11.0
+spot_angle = 36.0
+shadow_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
