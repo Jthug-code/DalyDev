@@ -1,0 +1,23 @@
+[project]
+name = "exo-mcp"
+version = "0.1.0"
+description = "MCP bridge for managing and using an exo cluster over Tailscale or LAN"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27.0",
+    "mcp[cli]>=1.6.0",
+]
+
+[project.scripts]
+exo-mcp = "exo_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/exo_mcp"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/exo_mcp" = "exo_mcp"

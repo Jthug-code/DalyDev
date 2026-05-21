@@ -1,0 +1,15 @@
+exo cluster (MCP) — Cursor configuration
+========================================
+
+1) On a machine that can reach your exo master (Tailscale or same host):
+
+   cd tools/exo-mcp
+   uv sync
+   export EXO_BASE_URL=http://100.x.y.z:52415   # master Tailscale IP
+
+2) Merge tools/exo-mcp/cursor-mcp.example.json into Cursor MCP settings.
+   Set the --directory path to this repo's tools/exo-mcp folder.
+
+3) Restart Cursor / reload MCP. Tools: exo_ping, exo_cluster_state, exo_create_instance, exo_chat_completion, etc.
+
+Full docs: tools/exo-mcp/README.md

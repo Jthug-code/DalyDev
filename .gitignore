@@ -20,3 +20,10 @@ export_presets.cfg
 # Catalyst / tooling (optional local secrets)
 .env
 *.log
+
+# Python (exo-mcp)
+__pycache__/
+*.py[cod]
+.venv/
+tools/exo-mcp/.venv/
+tools/exo-mcp/uv.lock

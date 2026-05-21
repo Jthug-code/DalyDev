@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "exo-cluster": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/ABSOLUTE/PATH/TO/dalydev/tools/exo-mcp",
+        "exo-mcp"
+      ],
+      "env": {
+        "EXO_BASE_URL": "http://100.x.y.z:52415",
+        "EXO_API_TOKEN": "",
+        "EXO_REQUEST_TIMEOUT": "600"
+      }
+    }
+  }
+}
