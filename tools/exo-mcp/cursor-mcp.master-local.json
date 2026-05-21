@@ -9,8 +9,7 @@
         "exo-mcp"
       ],
       "env": {
-        "EXO_BASE_URL": "http://100.88.30.110:52415",
-        "EXO_API_TOKEN": "",
+        "EXO_BASE_URL": "http://127.0.0.1:52415",
         "EXO_REQUEST_TIMEOUT": "600"
       }
     }

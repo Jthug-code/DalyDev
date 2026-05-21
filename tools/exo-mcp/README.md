@@ -25,6 +25,13 @@ The cloud agent does not join Tailscale. **You** run `exo-mcp` on a host that ca
 - exo master running and reachable from this machine
 - exo nodes on Tailscale (or LAN) as you already have
 
+## Your master (Tailscale)
+
+exo master Tailscale IP: **`100.88.30.110`**
+
+- **Cursor on the master machine:** `EXO_BASE_URL=http://127.0.0.1:52415` (see `cursor-mcp.master-local.json`)
+- **Cursor on another tailnet device:** `EXO_BASE_URL=http://100.88.30.110:52415` (see `cursor-mcp.example.json`)
+
 ## Quick start
 
 1. Install dependencies:
@@ -37,7 +44,7 @@ uv sync
 2. Set the master URL (Tailscale IP of the machine running exo master):
 
 ```bash
-export EXO_BASE_URL=http://100.x.y.z:52415
+export EXO_BASE_URL=http://100.88.30.110:52415
 uv run exo-mcp
 ```
 

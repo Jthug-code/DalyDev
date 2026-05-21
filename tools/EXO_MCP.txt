@@ -1,23 +1,17 @@
 exo cluster (MCP) — Cursor configuration
 ========================================
 
-Canonical standalone repo (create if missing, then clone):
+Master Tailscale IP: 100.88.30.110
 
-   https://github.com/Jthug-code/exo-mcp
+Canonical repo: https://github.com/Jthug-code/exo-mcp
+Interim branch:   git clone -b exo-mcp-standalone https://github.com/Jthug-code/DalyDev.git exo-mcp
 
-Until that repo exists, use the standalone branch on DalyDev:
+On the MASTER machine (Cursor + exo on same box):
+   export EXO_BASE_URL=http://127.0.0.1:52415
+   Use cursor-mcp.master-local.json
 
-   git clone -b exo-mcp-standalone https://github.com/Jthug-code/DalyDev.git exo-mcp
-   cd exo-mcp && ./scripts/publish-to-github.sh
+On another tailnet machine:
+   export EXO_BASE_URL=http://100.88.30.110:52415
+   Use cursor-mcp.example.json
 
-1) On a machine that can reach your exo master (Tailscale or same host):
-
-   cd exo-mcp
-   uv sync
-   export EXO_BASE_URL=http://100.x.y.z:52415
-
-2) Merge cursor-mcp.example.json into Cursor MCP settings (--directory = clone path).
-
-3) Restart Cursor / reload MCP.
-
-Full docs: README.md in the exo-mcp repo (or tools/exo-mcp/README.md in DalyDev).
+Then: uv sync, merge MCP JSON, reload Cursor.
