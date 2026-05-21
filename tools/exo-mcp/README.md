@@ -127,3 +127,18 @@ npx @modelcontextprotocol/inspector uv run --directory . exo-mcp
 
 - [exo API reference](https://github.com/exo-explore/exo/blob/main/docs/api.md)
 - Godot Catalyst MCP in `tools/CATALYST_MCP.txt` (separate integration)
+
+
+## Standalone repository
+
+This project lives in its own GitHub repo: **https://github.com/Jthug-code/exo-mcp**
+
+To create and push it (requires your GitHub account, not the Cursor app token):
+
+```bash
+git clone -b exo-mcp-standalone https://github.com/Jthug-code/DalyDev.git exo-mcp
+cd exo-mcp
+./scripts/publish-to-github.sh
+```
+
+Or clone from a bundle: `git clone exo-mcp.bundle exo-mcp`
